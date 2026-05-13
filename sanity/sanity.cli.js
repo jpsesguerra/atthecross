@@ -5,4 +5,5 @@ export default defineCliConfig({
     projectId: 'rbmtiv02',
     dataset: 'production',
   },
+  studioHost: 'atthecross',
 });
