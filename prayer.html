@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit a prayer request to At The Cross Live — we count it a privilege to pray for you.">
+  <title>Prayer — At The Cross Live</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/prayer.css">
+
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="siteNav" aria-label="Main navigation">
+    <div class="container">
+      <a href="/index.html" class="navBrand" aria-label="At The Cross — Home"></a>
+      <button class="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navMenu" id="navMenu" role="list">
+        <li><a href="/index.html" class="navLink">HOME</a></li>
+        <li><a href="/about.html" class="navLink">ABOUT</a></li>
+        <li><a href="/videos.html" class="navLink">VIDEOS</a></li>
+        <li><a href="/resources.html" class="navLink">RESOURCES</a></li>
+        <li><a href="https://atthecrosslive.online.church/" class="navLink" target="_blank" rel="noopener">LIVESTREAM</a></li>
+        <li><a href="/give.html" class="navLinkGive">GIVE</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE BANNER ===== -->
+  <section class="pageBanner" aria-label="Prayer">
+    <h1 class="pageBannerText">PRAYERS</h1>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section aria-label="Introduction">
+    <p class="prayerIntro">
+      The staff of <strong>At The Cross Live</strong> count it a privilege to pray for you and your needs.
+      Please take a moment and send your prayer request now.
+    </p>
+  </section>
+
+  <!-- ===== PRAYER FORM ===== -->
+  <section class="prayerFormSection" aria-label="Prayer request form">
+    <div class="container">
+      <form class="prayerFormInner" id="prayerForm" novalidate>
+
+        <!-- Hidden Web3Forms fields -->
+        <input type="hidden" name="access_key" value="72d0662c-9651-4126-99ad-229cfb4e6680">
+        <input type="hidden" name="subject" value="Prayer Request — At The Cross">
+        <input type="hidden" name="from_name" value="At The Cross Website">
+
+        <!-- Left column: topic + request -->
+        <div class="prayerFormCol">
+          <div>
+            <label class="formLabel" for="prayerTopic">Select A Topic:</label>
+            <select class="formSelect" id="prayerTopic" name="Prayer Topic" required>
+              <option value="General">General</option>
+              <option value="Salvation for a Loved One">Salvation for a Loved One</option>
+              <option value="Healing">Healing</option>
+              <option value="Finances">Finances</option>
+              <option value="Family">Family</option>
+              <option value="Emotions">Emotions</option>
+              <option value="Drugs/Alcohol">Drugs/Alcohol</option>
+              <option value="Sexual Issues">Sexual Issues</option>
+              <option value="Suicide">Suicide</option>
+            </select>
+          </div>
+          <div>
+            <label class="formLabel" for="prayerRequest">Your Prayer Request:</label>
+            <textarea
+              class="formTextarea"
+              id="prayerRequest"
+              name="Prayer Request"
+              placeholder="Please let us know how we can pray for you."
+              maxlength="5000"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Right column: contact details -->
+        <div class="prayerFormCol">
+          <div>
+            <label class="formLabel" for="prayerName">Name:</label>
+            <input class="formInput" type="text" id="prayerName" name="name" placeholder="Enter your name" required>
+          </div>
+          <div>
+            <label class="formLabel" for="prayerEmail">Email Address:</label>
+            <input class="formInput" type="email" id="prayerEmail" name="email" placeholder="Enter your email address" required>
+          </div>
+          <div>
+            <label class="formLabel" for="prayerPhone">Phone Number:</label>
+            <input class="formInput" type="tel" id="prayerPhone" name="Phone Number" placeholder="Enter your phone number">
+          </div>
+          <div>
+            <label class="formLabel">Would you like us to contact you?</label>
+            <div class="formRadioGroup" role="radiogroup">
+              <label class="formRadioLabel">
+                <input type="radio" name="Contact Requested" value="Yes"> Yes
+              </label>
+              <label class="formRadioLabel">
+                <input type="radio" name="Contact Requested" value="No" checked> No
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btnDark" style="margin-top: var(--space-4);">SUBMIT</button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== HOTLINE ===== -->
+  <div class="prayerHotline" role="complementary" aria-label="Prayer hotline">
+    <div class="container">
+      <p class="prayerHotlineText">PRAYER HOTLINE: 416-255-4444 (During Live Show)</p>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="footerInner">
+        <div class="footerEmail">
+          <p class="footerEmailLabel"><strong>Email Updates:</strong> Get weekly news and inspiration</p>
+          <form class="footerEmailForm" id="footerNewsletterForm">
+            <input type="hidden" name="access_key" value="72d0662c-9651-4126-99ad-229cfb4e6680">
+            <input type="hidden" name="subject" value="Newsletter Signup — At The Cross">
+            <input class="footerEmailInput" type="email" name="email" placeholder="Enter your email address" required aria-label="Email address">
+            <button type="submit" class="footerEmailSubmit">SUBMIT</button>
+          </form>
+          <p class="footerCopyright">&copy;2017 At The Cross Live Ministries | Website Design by <a href="http://joelpaolo.com" target="_blank" rel="noopener">Joel Esguerra</a></p>
+        </div>
+        <div class="footerContact">
+          <p class="footerContactName">AT THE CROSS MINISTRIES</p>
+          <p class="footerContactInfo">P.O. Box 48011 Dundas Shepard<br>Mississauga, ON L5A 4G8</p>
+          <p class="footerContactInfo">Phone: 647-847-1411<br>Email: info@atthecrosslive.com</p>
+          <div class="footerSocial">
+            <a href="https://www.facebook.com/atthecrosslive" target="_blank" rel="noopener" class="footerSocialLink" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.883v2.27h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/user/atthecrosslivetv" target="_blank" rel="noopener" class="footerSocialLink" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+            </a>
+            <a href="https://twitter.com/AtTheCrossLive" target="_blank" rel="noopener" class="footerSocialLink" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/forms.js"></script>
+
+</body>
+</html>

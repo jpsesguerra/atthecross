@@ -1,0 +1,186 @@
+/* ============================================================
+   ABOUT PAGE — At The Cross
+   ============================================================ */
+
+/* --- Intro Banner Image --- */
+
+.aboutBannerImage {
+  background-image: url('../../images/ATC-Banner-Long.jpg');
+  background-position: center 35%;
+  background-size: cover;
+  height: 280px;
+}
+
+/* --- Intro Text --- */
+
+.aboutIntro {
+  padding: var(--space-8) 0;
+}
+
+.aboutIntroText {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: var(--space-8) var(--space-10);
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-greyDark);
+}
+
+/* --- Beliefs + Host Columns --- */
+
+.aboutColumns {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.aboutBeliefs {
+  width: 70%;
+  background: rgba(223, 223, 223, 0.5);
+  padding: var(--space-6) var(--space-8) var(--space-8);
+}
+
+.aboutBeliefsTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: var(--space-6);
+}
+
+.aboutSubheading {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-black);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.aboutSubheadingMinor {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-greyDark);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.aboutParagraph {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--color-grey);
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+
+/* --- Host Sidebar --- */
+
+.aboutHost {
+  width: 30%;
+  background-image: url('../../images/Tile-Light-Grey.jpg');
+  background-size: contain;
+}
+
+.aboutHostPhoto {
+  width: 100%;
+  height: 200px;
+  background-image: url('../../images/Bonfire-Night-March-1.jpg');
+  background-position: center;
+  background-size: cover;
+  filter: contrast(1.29);
+}
+
+.aboutHostInfo {
+  padding: var(--space-5) var(--space-5) var(--space-4);
+}
+
+.aboutHostRole {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-greyDark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-1);
+}
+
+.aboutHostName {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 500;
+  color: var(--color-black);
+  margin-bottom: var(--space-3);
+}
+
+.aboutHostBio {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--color-grey);
+  line-height: 1.5;
+  margin-bottom: var(--space-3);
+}
+
+.aboutHostSocial {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.aboutHostSocialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  opacity: 0.7;
+  transition: opacity var(--transition-base);
+}
+
+.aboutHostSocialLink:hover { opacity: 1; }
+
+.aboutHostSocialLink svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--color-greyDark);
+}
+
+.aboutBoardLabel {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-greyDark);
+  margin-bottom: var(--space-2);
+}
+
+.aboutBoardList {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--color-grey);
+  line-height: 1.8;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 479px) {
+  .aboutColumns {
+    flex-direction: column;
+  }
+
+  .aboutBeliefs,
+  .aboutHost {
+    width: 100%;
+  }
+
+  .aboutIntroText {
+    padding: var(--space-6) var(--space-4);
+    font-size: var(--text-base);
+  }
+}

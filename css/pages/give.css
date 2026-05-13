@@ -1,0 +1,87 @@
+/* ============================================================
+   GIVE PAGE — At The Cross
+   ============================================================ */
+
+.giveIntro {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: var(--space-10) var(--space-6);
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-greyDark);
+}
+
+/* --- Three give methods --- */
+
+.giveMethods {
+  margin-bottom: var(--space-10);
+}
+
+.giveMethodsInner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.giveMethod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.33%;
+  padding: var(--space-8) var(--space-8);
+  text-align: center;
+}
+
+.giveMethodIcon {
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: var(--space-5);
+  flex-shrink: 0;
+}
+
+.giveMethodIcon--mail    { background-image: url('../../images/Mail.png'); }
+.giveMethodIcon--paypal  { background-image: url('../../images/Paypal.png'); }
+.giveMethodIcon--cheque  { background-image: url('../../images/Chque.png'); }
+
+.giveMethodText {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--color-grey);
+  line-height: 1.7;
+  margin-bottom: var(--space-5);
+  text-align: center;
+}
+
+.paypalForm {
+  margin-top: var(--space-2);
+}
+
+.paypalForm img {
+  display: block;
+  margin-inline: auto;
+  cursor: pointer;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 479px) {
+  .giveMethodsInner {
+    flex-direction: column;
+  }
+
+  .giveMethod {
+    width: 100%;
+    padding: var(--space-5) var(--space-4);
+  }
+
+  .giveIntro {
+    font-size: var(--text-base);
+    padding: var(--space-6) var(--space-4);
+  }
+}

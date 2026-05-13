@@ -3,3 +3,6 @@ Thumbs.db
 *.env
 .env.local
 node_modules/
+sanity/node_modules/
+sanity/.sanity/
+sanity/dist/

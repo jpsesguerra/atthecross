@@ -1,0 +1,89 @@
+/* ============================================================
+   LIVESTREAM PAGE — At The Cross
+   ============================================================ */
+
+.livestreamEmbed {
+  padding: var(--space-10) 0 var(--space-6);
+}
+
+.videoEmbed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.videoEmbed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.previousEpisodes {
+  padding: var(--space-6) 0 var(--space-12);
+}
+
+.previousEpisodesHeading {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-greyDark);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.previousEpisodesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.episodeCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-decoration: none;
+}
+
+.episodeThumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.episodeThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.episodeTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-greyDark);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+  .previousEpisodesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 479px) {
+  .livestreamEmbed {
+    padding: var(--space-6) 0 var(--space-4);
+  }
+}

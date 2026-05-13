@@ -1,0 +1,147 @@
+/* ============================================================
+   PRAYER PAGE — At The Cross
+   ============================================================ */
+
+.prayerIntro {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-greyDark);
+}
+
+/* --- Form layout --- */
+
+.prayerFormSection {
+  margin-bottom: var(--space-10);
+}
+
+.prayerFormInner {
+  display: flex;
+  gap: var(--space-6);
+  padding: 0 var(--space-8);
+}
+
+.prayerFormCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* --- Form elements --- */
+
+.formLabel {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-greyDark);
+  margin-bottom: var(--space-1);
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--color-greyDark);
+  background: var(--color-white);
+  transition: border-color var(--transition-base);
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.formTextarea {
+  min-height: 220px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* --- Radio group --- */
+
+.formRadioGroup {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+  margin-top: var(--space-1);
+}
+
+.formRadioLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--color-greyDark);
+  cursor: pointer;
+}
+
+.formRadioLabel input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+}
+
+/* --- Form message feedback --- */
+
+.formMessage {
+  margin-top: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+}
+
+.formMessage[data-type="success"] {
+  background: #e6f4ea;
+  color: #2e7d32;
+}
+
+.formMessage[data-type="error"] {
+  background: #fdecea;
+  color: #c62828;
+}
+
+/* --- Hotline bar --- */
+
+.prayerHotline {
+  background-color: #b40017;
+  padding: var(--space-4) 0;
+  text-align: center;
+}
+
+.prayerHotlineText {
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 479px) {
+  .prayerFormInner {
+    flex-direction: column;
+    padding: 0 var(--space-4);
+  }
+
+  .prayerIntro {
+    font-size: var(--text-base);
+    padding: var(--space-6) var(--space-4);
+  }
+}

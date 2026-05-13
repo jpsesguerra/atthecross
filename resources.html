@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resources from At The Cross Live — articles, devotionals, and the book by Corville Peters.">
+  <title>Resources — At The Cross Live</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/cms.css">
+
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="siteNav" aria-label="Main navigation">
+    <div class="container">
+      <a href="/index.html" class="navBrand" aria-label="At The Cross — Home"></a>
+      <button class="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navMenu" id="navMenu" role="list">
+        <li><a href="/index.html" class="navLink">HOME</a></li>
+        <li><a href="/about.html" class="navLink">ABOUT</a></li>
+        <li><a href="/videos.html" class="navLink">VIDEOS</a></li>
+        <li><a href="/resources.html" class="navLink">RESOURCES</a></li>
+        <li><a href="https://atthecrosslive.online.church/" class="navLink" target="_blank" rel="noopener">LIVESTREAM</a></li>
+        <li><a href="/give.html" class="navLinkGive">GIVE</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE BANNER ===== -->
+  <section class="pageBanner" aria-label="Resources">
+    <h1 class="pageBannerText">RESOURCES</h1>
+  </section>
+
+  <!-- ===== RESOURCES LAYOUT ===== -->
+  <section aria-label="Resources content">
+    <div class="container">
+      <div class="resourcesLayout">
+
+        <!-- Main: devotionals banner + articles grid -->
+        <div class="resourcesMain">
+          <a href="/devotionals.html" class="resourcesMomentBanner" aria-label="A Moment With God — devotionals"></a>
+
+          <div class="cmsGrid cmsGrid--2col" id="resourcesGrid" style="margin-top:var(--space-8);">
+            <p class="cmsEmpty">Loading resources…</p>
+          </div>
+        </div>
+
+        <!-- Sidebar: book + useful articles -->
+        <aside class="resourcesSidebar" aria-label="Book and articles">
+          <a href="https://www.goodreads.com/book/show/28535956-what-does-the-cross-mean-to-you"
+             target="_blank" rel="noopener"
+             class="resourcesBookLink"
+             aria-label="What Does the Cross Mean to You — get the book">
+            <div class="resourcesBookCover" role="img" aria-label="Book cover"></div>
+            <p class="resourcesBookTitle">
+              What Does the Cross Mean to You?
+              <span style="font-weight:500;"> A Twenty-One Day Journey to Wholeness</span>
+            </p>
+          </a>
+
+          <p class="resourcesArticlesHeading">USEFUL ARTICLES</p>
+          <div id="articlesList">
+            <p class="cmsEmpty" style="padding:var(--space-4) 0;">Loading…</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRAYER CTA ===== -->
+  <section class="prayerCta" aria-label="Prayer request">
+    <div class="container">
+      <div class="prayerCtaInner">
+        <div class="prayerCtaImage" style="background-image:url('images/Group-21.jpg');" role="img" aria-label="Prayer"></div>
+        <div class="prayerCtaContent">
+          <h2 class="prayerCtaHeading">Do you need prayer?</h2>
+          <p class="prayerCtaText">The staff of At The Cross Live count it a privilege to pray for you and your needs. Please take a moment and send your prayer request now.</p>
+          <a href="/prayer.html" class="btn btnPrimary">PRAYER REQUEST</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="footerInner">
+        <div class="footerEmail">
+          <p class="footerEmailLabel"><strong>Email Updates:</strong> Get weekly news and inspiration</p>
+          <form class="footerEmailForm" id="footerNewsletterForm">
+            <input type="hidden" name="access_key" value="72d0662c-9651-4126-99ad-229cfb4e6680">
+            <input type="hidden" name="subject" value="Newsletter Signup — At The Cross">
+            <input class="footerEmailInput" type="email" name="email" placeholder="Enter your email address" required aria-label="Email address">
+            <button type="submit" class="footerEmailSubmit">SUBMIT</button>
+          </form>
+          <p class="footerCopyright">&copy;2017 At The Cross Live Ministries | Website Design by <a href="http://joelpaolo.com" target="_blank" rel="noopener">Joel Esguerra</a></p>
+        </div>
+        <div class="footerContact">
+          <p class="footerContactName">AT THE CROSS MINISTRIES</p>
+          <p class="footerContactInfo">P.O. Box 48011 Dundas Shepard<br>Mississauga, ON L5A 4G8</p>
+          <p class="footerContactInfo">Phone: 647-847-1411<br>Email: info@atthecrosslive.com</p>
+          <div class="footerSocial">
+            <a href="https://www.facebook.com/atthecrosslive" target="_blank" rel="noopener" class="footerSocialLink" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.883v2.27h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/user/atthecrosslivetv" target="_blank" rel="noopener" class="footerSocialLink" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+            </a>
+            <a href="https://twitter.com/AtTheCrossLive" target="_blank" rel="noopener" class="footerSocialLink" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/sanity.js"></script>
+  <script>
+    async function loadResources() {
+      const [resources, articles] = await Promise.allSettled([
+        sanityFetch(QUERIES.resources),
+        sanityFetch(QUERIES.articles),
+      ]);
+
+      const grid = document.getElementById('resourcesGrid');
+      const r = resources.status === 'fulfilled' ? resources.value : [];
+      if (r?.length) {
+        grid.innerHTML = r.map(renderResourceCard).join('');
+      } else {
+        renderEmptyState(grid, 'Resources coming soon.');
+      }
+
+      const list = document.getElementById('articlesList');
+      const a = articles.status === 'fulfilled' ? articles.value : [];
+      if (a?.length) {
+        list.innerHTML = a.map(renderArticleLink).join('');
+      } else {
+        list.innerHTML = '<p class="cmsEmpty" style="padding:var(--space-4) 0;">Articles coming soon.</p>';
+      }
+    }
+
+    loadResources();
+  </script>
+
+</body>
+</html>
