@@ -1,0 +1,114 @@
+/* ============================================================
+   DESIGN TOKENS — At The Cross
+   Single source of truth for all colours, fonts, and spacing.
+   ============================================================ */
+
+/* --- Fonts --- */
+@font-face {
+  font-family: 'SFUIDisplay';
+  src: url('../fonts/SF-UI-Display-Ultralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFUIDisplay';
+  src: url('../fonts/SF-UI-Display-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFUIDisplay';
+  src: url('../fonts/SF-UI-Display-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFUIDisplay';
+  src: url('../fonts/SF-UI-Display-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFUIDisplay';
+  src: url('../fonts/SF-UI-Display-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFUIDisplay';
+  src: url('../fonts/SF-UI-Display-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFUIDisplay';
+  src: url('../fonts/SF-UI-Display-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFUIDisplay';
+  src: url('../fonts/SF-UI-Display-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- Colour palette --- */
+  --color-primary:      #d0011b;   /* firebrick red */
+  --color-primaryDark:  #a80016;
+  --color-black:        #000000;
+  --color-greyDark:     #4a4a4a;
+  --color-grey:         #555555;
+  --color-greyLight:    #f5f5f5;
+  --color-white:        #ffffff;
+
+  /* --- Typography --- */
+  --font-display:  'SFUIDisplay', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-heading:  'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body:     'Merriweather', Georgia, serif;
+
+  /* --- Font scale --- */
+  --text-xs:   0.75rem;   /*  12px */
+  --text-sm:   0.875rem;  /*  14px */
+  --text-base: 1rem;      /*  16px */
+  --text-md:   1.125rem;  /*  18px */
+  --text-lg:   1.25rem;   /*  20px */
+  --text-xl:   1.5rem;    /*  24px */
+  --text-2xl:  2rem;      /*  32px */
+  --text-3xl:  2.5rem;    /*  40px */
+  --text-4xl:  3rem;      /*  48px */
+
+  /* --- Spacing scale (4px base) --- */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* --- Layout --- */
+  --container-max:  1100px;
+  --nav-height:     100px;
+  --border-radius:  8px;
+
+  /* --- Transitions --- */
+  --transition-base: 200ms ease;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+}

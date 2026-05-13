@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="At The Cross Live — Ministering the power of the Cross of Jesus Christ to those who are lost and hurting.">
+  <title>At The Cross Live</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+
+  <!-- Favicons -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+
+  <!-- Analytics (replace UA with GA4 ID when ready) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="siteNav" aria-label="Main navigation">
+    <div class="container">
+      <a href="/index.html" class="navBrand" aria-label="At The Cross — Home"></a>
+      <button class="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navMenu" id="navMenu" role="list">
+        <li><a href="/index.html" class="navLink">HOME</a></li>
+        <li><a href="/about.html" class="navLink">ABOUT</a></li>
+        <li><a href="/videos.html" class="navLink">VIDEOS</a></li>
+        <li><a href="/resources.html" class="navLink">RESOURCES</a></li>
+        <li><a href="https://atthecrosslive.online.church/" class="navLink" target="_blank" rel="noopener">LIVESTREAM</a></li>
+        <li><a href="/give.html" class="navLinkGive">GIVE</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SLIDER ===== -->
+  <section class="heroSlider" aria-label="Featured content">
+    <div class="sliderTrack">
+
+      <div class="sliderSlide sliderSlide--book isActive" aria-hidden="false">
+        <a href="https://www.amazon.com/What-Does-Cross-Mean-You/dp/1512714453" target="_blank" rel="noopener" class="sliderCta">
+          <h2 class="sliderHeading">What Does the Cross Mean to You?</h2>
+          <span class="btn btnPrimary" style="align-self:flex-start;">GET THE BOOK</span>
+        </a>
+      </div>
+
+      <div class="sliderSlide sliderSlide--banquet" aria-hidden="true">
+        <div class="sliderCta">
+          <h2 class="sliderHeading">At The Cross Live</h2>
+          <a href="/videos.html" class="btn btnPrimary" style="align-self:flex-start;">WATCH NOW</a>
+        </div>
+      </div>
+
+      <button class="sliderArrow sliderArrow--prev" aria-label="Previous slide">&#8249;</button>
+      <button class="sliderArrow sliderArrow--next" aria-label="Next slide">&#8250;</button>
+      <div class="sliderNav" role="group" aria-label="Slider navigation">
+        <button class="sliderDot isActive" aria-label="Go to slide 1"></button>
+        <button class="sliderDot" aria-label="Go to slide 2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED VIDEO ===== -->
+  <!-- Content populated by Sanity CMS — placeholder shown until connected -->
+  <section class="featuredSection" aria-label="Featured videos">
+    <div class="container">
+      <div class="featuredInner">
+
+        <div class="featuredMain" id="featuredMainVideo">
+          <div class="featuredEmbed">
+            <!-- Sanity will inject iframe here -->
+            <img src="images/Resources.jpg" alt="Latest episode" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="featuredMeta">
+            <span class="featuredBadge">LATEST EPISODE</span>
+            <h2 class="featuredTitle" id="featuredMainTitle">Coming soon — connect Sanity CMS to load episodes</h2>
+          </div>
+        </div>
+
+        <div class="featuredSidebar" id="featuredSidebar">
+          <a href="/videos.html" class="featuredMiniCard">
+            <div class="featuredMiniThumb">
+              <img src="images/Resources.jpg" alt="Past episode thumbnail">
+            </div>
+            <div class="featuredMiniInfo">
+              <span class="featuredMiniBadge">PAST EPISODE</span>
+              <p class="featuredMiniTitle">Browse our past episodes</p>
+            </div>
+          </a>
+          <a href="/videos.html" class="featuredMiniCard">
+            <div class="featuredMiniThumb">
+              <img src="images/Bonfire-Night-March-1.jpg" alt="The Bible says thumbnail">
+            </div>
+            <div class="featuredMiniInfo">
+              <span class="featuredMiniBadge">THE BIBLE SAYS...</span>
+              <p class="featuredMiniTitle">Scripture for every season</p>
+            </div>
+          </a>
+          <a href="/videos.html" class="featuredMiniCard">
+            <div class="featuredMiniThumb">
+              <img src="images/Group-21.jpg" alt="A moment with God thumbnail">
+            </div>
+            <div class="featuredMiniInfo">
+              <span class="featuredMiniBadge">A MOMENT WITH GOD</span>
+              <p class="featuredMiniTitle">Daily encouragement from the Word</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ICONS ===== -->
+  <section class="aboutIcons" aria-label="Ministry overview">
+    <div class="container">
+      <div class="aboutIconsInner">
+
+        <a href="/about.html" class="aboutIconCard">
+          <div class="aboutIconImage aboutIconImage--mission" role="img" aria-label="Bible icon"></div>
+          <h3 class="aboutIconTitle">OUR MISSION</h3>
+          <p class="aboutIconText">We exist to be a vehicle for serving lost and hurting souls with the message of the Cross of Jesus Christ through interactive media.</p>
+        </a>
+
+        <a href="/videos.html" class="aboutIconCard">
+          <div class="aboutIconImage aboutIconImage--videos" role="img" aria-label="Video icon"></div>
+          <h3 class="aboutIconTitle">VIDEOS</h3>
+          <p class="aboutIconText">We provide free resources to speak faith, hope &amp; love to those who are in need through our collections of past episodes.</p>
+        </a>
+
+        <a href="/give.html" class="aboutIconCard">
+          <div class="aboutIconImage aboutIconImage--give" role="img" aria-label="Give icon"></div>
+          <h3 class="aboutIconTitle">GIVE</h3>
+          <p class="aboutIconText">We appreciate your prayers and support as we continue to proclaim the message of the cross. Every gift counts!</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOST BIO ===== -->
+  <section class="hostBio" aria-label="About Corville Peters">
+    <div class="container">
+      <div class="hostBioInner">
+        <div class="hostBioImage" role="img" aria-label="Corville Peters speaking"></div>
+        <div class="hostBioContent">
+          <h2 class="hostBioName">Corville Peters</h2>
+          <p class="hostBioText">Corville Peters is the Founder and Producer/Host of "AT THE CROSS Live," a ministry aimed at restoring lost and broken lives through the power of the Cross and faith in Jesus Christ.</p>
+          <a href="/about.html" class="btn btnPrimary">ABOUT US</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEOS GRID ===== -->
+  <!-- Content populated by Sanity CMS -->
+  <section class="videosSection" aria-label="Recent videos">
+    <div class="container">
+      <div class="videosGrid" id="videosGrid">
+        <!-- Sanity will populate these cards -->
+        <a href="/videos.html" class="videoCard">
+          <div class="videoCardThumb">
+            <img src="images/Resources.jpg" alt="Video placeholder" loading="lazy">
+          </div>
+          <span class="videoCardTitle">Browse all videos</span>
+        </a>
+      </div>
+      <div class="sectionCta">
+        <a href="/videos.html" class="btn btnDark">MORE VIDEOS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOK / RESOURCES ===== -->
+  <section class="bookSection" aria-label="Book and resources">
+    <div class="container">
+      <div class="bookInner">
+        <div class="bookFeature">
+          <div class="bookCover" role="img" aria-label="What Does the Cross Mean to You book cover"></div>
+          <div class="bookContent">
+            <h2 class="bookTitle">What Does the Cross Mean To You?</h2>
+            <p class="bookDescription">Are you living your faith to its fullest? Are you experiencing God's perfect love, perfect forgiveness, perfect freedom, perfect hope, and perfect acceptance?<br><br>What Does the Cross Mean to You? A Twenty-One Day Journey to Wholeness is author Corville Peters' invitation to embark on a path of discovery.</p>
+            <div class="bookActions">
+              <a href="https://www.goodreads.com/book/show/28535956-what-does-the-cross-mean-to-you" target="_blank" rel="noopener" class="btn btnDark">GET BOOK</a>
+              <a href="/resources.html" class="btn btnDark">MORE RESOURCES</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRAYER CTA ===== -->
+  <section class="prayerCta" aria-label="Prayer request">
+    <div class="container">
+      <div class="prayerCtaInner">
+        <div class="prayerCtaImage" style="background-image:url('images/Group-21.jpg');" role="img" aria-label="Prayer"></div>
+        <div class="prayerCtaContent">
+          <h2 class="prayerCtaHeading">Do you need prayer?</h2>
+          <p class="prayerCtaText">The staff of At The Cross Live count it a privilege to pray for you and your needs. Please take a moment and send your prayer request now.</p>
+          <a href="/prayer.html" class="btn btnPrimary">PRAYER REQUEST</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="siteFooter">
+    <div class="container">
+      <div class="footerInner">
+
+        <div class="footerEmail">
+          <p class="footerEmailLabel"><strong>Email Updates:</strong> Get weekly news and inspiration</p>
+          <form class="footerEmailForm" id="footerNewsletterForm">
+            <input type="hidden" name="access_key" value="72d0662c-9651-4126-99ad-229cfb4e6680">
+            <input type="hidden" name="subject" value="Newsletter Signup — At The Cross">
+            <input class="footerEmailInput" type="email" name="email" placeholder="Enter your email address" required aria-label="Email address">
+            <button type="submit" class="footerEmailSubmit">SUBMIT</button>
+          </form>
+          <p class="footerCopyright">
+            &copy;2017 At The Cross Live Ministries | Website Design by
+            <a href="http://joelpaolo.com" target="_blank" rel="noopener">Joel Esguerra</a>
+          </p>
+        </div>
+
+        <div class="footerContact">
+          <p class="footerContactName">AT THE CROSS MINISTRIES</p>
+          <p class="footerContactInfo">
+            P.O. Box 48011 Dundas Shepard<br>
+            Mississauga, ON L5A 4G8
+          </p>
+          <p class="footerContactInfo">
+            Phone: 647-847-1411<br>
+            Email: info@atthecrosslive.com
+          </p>
+          <div class="footerSocial">
+            <a href="https://www.facebook.com/atthecrosslive" target="_blank" rel="noopener" class="footerSocialLink" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.883v2.27h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/user/atthecrosslivetv" target="_blank" rel="noopener" class="footerSocialLink" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+            </a>
+            <a href="https://twitter.com/AtTheCrossLive" target="_blank" rel="noopener" class="footerSocialLink" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/nav.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/forms.js"></script>
+
+</body>
+</html>
