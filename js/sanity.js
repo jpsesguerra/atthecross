@@ -82,7 +82,7 @@ function renderVideoCard(video) {
     : 'images/Resources.jpg';
   const slug = video.slug?.current || '#';
   return `
-    <a href="/detail-video.html?slug=${slug}" class="cmsCard">
+    <a href="/detail-video?slug=${slug}" class="cmsCard">
       <div class="cmsCardThumb">
         <img src="${thumb}" alt="${video.title}" loading="lazy">
       </div>
@@ -96,7 +96,7 @@ function renderDevotionalCard(item) {
     : 'images/Resources.jpg';
   const slug = item.slug?.current || '#';
   return `
-    <a href="/detail-devotional.html?slug=${slug}" class="cmsCard">
+    <a href="/detail-devotional?slug=${slug}" class="cmsCard">
       <div class="cmsCardThumb">
         <img src="${img}" alt="${item.title}" loading="lazy">
       </div>
@@ -110,7 +110,7 @@ function renderResourceCard(item) {
     : 'images/Resources.jpg';
   const slug = item.slug?.current || '#';
   return `
-    <a href="/detail-story.html?slug=${slug}" class="cmsCard">
+    <a href="/detail-story?slug=${slug}" class="cmsCard">
       <div class="cmsCardThumb">
         <img src="${img}" alt="${item.title}" loading="lazy">
       </div>
@@ -122,7 +122,7 @@ function renderArticleLink(item) {
   const slug = item.slug?.current || '#';
   return `
     <div class="resourcesArticleItem">
-      <a href="/detail-story.html?slug=${slug}" class="resourcesArticleLink">${item.title}</a>
+      <a href="/detail-story?slug=${slug}" class="resourcesArticleLink">${item.title}</a>
     </div>`;
 }
 
