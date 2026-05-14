@@ -23,6 +23,7 @@
   position: absolute;
   inset: 0;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 500ms ease;
   background-size: cover;
   background-position: center;
@@ -30,6 +31,7 @@
 
 .sliderSlide.isActive {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .sliderSlide--book {
