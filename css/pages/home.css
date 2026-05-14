@@ -45,9 +45,11 @@
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding: var(--space-10);
+  /* 10px dot height + 16px dot bottom offset + 60px gap */
+  padding-bottom: 86px;
   background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 60%);
 }
 
