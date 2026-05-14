@@ -49,16 +49,14 @@
     <div class="sliderTrack">
 
       <div class="sliderSlide sliderSlide--book isActive" aria-hidden="false">
-        <a href="https://www.amazon.com/What-Does-Cross-Mean-You/dp/1512714453" target="_blank" rel="noopener" class="sliderCta">
-          <h2 class="sliderHeading">What Does the Cross Mean to You?</h2>
-          <span class="btn btnPrimary" style="align-self:flex-start;">GET THE BOOK</span>
-        </a>
+        <div class="sliderCta">
+          <a href="/videos" class="btn btnPrimary" id="sliderWatchBtn">WATCH NOW</a>
+        </div>
       </div>
 
       <div class="sliderSlide sliderSlide--banquet" aria-hidden="true">
         <div class="sliderCta">
-          <h2 class="sliderHeading">At The Cross Live</h2>
-          <a href="/videos" class="btn btnPrimary" style="align-self:flex-start;">WATCH NOW</a>
+          <a href="https://www.amazon.ca/What-Does-Cross-Mean-You/dp/1512714453" target="_blank" rel="noopener" class="btn btnPrimary">GET THE BOOK</a>
         </div>
       </div>
 
@@ -78,44 +76,19 @@
       <div class="featuredInner">
 
         <div class="featuredMain" id="featuredMainVideo">
-          <div class="featuredEmbed">
-            <!-- Sanity will inject iframe here -->
-            <img src="images/Resources.jpg" alt="Latest episode" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div class="featuredMeta">
-            <span class="featuredBadge">LATEST EPISODE</span>
-            <h2 class="featuredTitle" id="featuredMainTitle">Coming soon — connect Sanity CMS to load episodes</h2>
-          </div>
+          <a href="/videos" class="featuredMainLink" id="featuredMainLink">
+            <div class="featuredEmbed" id="featuredMainThumb">
+              <img src="images/Resources.jpg" alt="Latest episode" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div class="featuredMeta">
+              <span class="featuredBadge">LATEST EPISODE</span>
+              <h2 class="featuredTitle" id="featuredMainTitle">Loading…</h2>
+            </div>
+          </a>
         </div>
 
         <div class="featuredSidebar" id="featuredSidebar">
-          <a href="/videos" class="featuredMiniCard">
-            <div class="featuredMiniThumb">
-              <img src="images/Resources.jpg" alt="Past episode thumbnail">
-            </div>
-            <div class="featuredMiniInfo">
-              <span class="featuredMiniBadge">PAST EPISODE</span>
-              <p class="featuredMiniTitle">Browse our past episodes</p>
-            </div>
-          </a>
-          <a href="/videos" class="featuredMiniCard">
-            <div class="featuredMiniThumb">
-              <img src="images/Bonfire-Night-March-1.jpg" alt="The Bible says thumbnail">
-            </div>
-            <div class="featuredMiniInfo">
-              <span class="featuredMiniBadge">THE BIBLE SAYS...</span>
-              <p class="featuredMiniTitle">Scripture for every season</p>
-            </div>
-          </a>
-          <a href="/videos" class="featuredMiniCard">
-            <div class="featuredMiniThumb">
-              <img src="images/Group-21.jpg" alt="A moment with God thumbnail">
-            </div>
-            <div class="featuredMiniInfo">
-              <span class="featuredMiniBadge">A MOMENT WITH GOD</span>
-              <p class="featuredMiniTitle">Daily encouragement from the Word</p>
-            </div>
-          </a>
+          <!-- populated by Sanity JS -->
         </div>
 
       </div>
@@ -168,13 +141,7 @@
   <section class="videosSection" aria-label="Recent videos">
     <div class="container">
       <div class="videosGrid" id="videosGrid">
-        <!-- Sanity will populate these cards -->
-        <a href="/videos" class="videoCard">
-          <div class="videoCardThumb">
-            <img src="images/Resources.jpg" alt="Video placeholder" loading="lazy">
-          </div>
-          <span class="videoCardTitle">Browse all videos</span>
-        </a>
+        <!-- populated by Sanity JS -->
       </div>
       <div class="sectionCta">
         <a href="/videos" class="btn btnDark">MORE VIDEOS</a>
@@ -229,7 +196,7 @@
             <button type="submit" class="footerEmailSubmit">SUBMIT</button>
           </form>
           <p class="footerCopyright">
-            &copy;2017 At The Cross Live Ministries | Website Design by
+            &copy;2026 At The Cross Live Ministries | Website Design by
             <a href="http://joelpaolo.com" target="_blank" rel="noopener">Joel Esguerra</a>
           </p>
         </div>
@@ -265,6 +232,86 @@
   <script src="js/nav.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/forms.js"></script>
+  <script src="js/sanity.js"></script>
+  <script>
+    async function loadHomepage() {
+      const [videos, devotionals, resources] = await Promise.allSettled([
+        sanityFetch(`*[_type == "video"] | order(publishedAt desc) [0..2] {_id, title, slug, "thumbnail": thumbnail.asset._ref}`),
+        sanityFetch(`*[_type == "devotional"] | order(publishedAt desc) [0] {_id, title, slug, "image": image.asset._ref}`),
+        sanityFetch(`*[_type == "resource"] | order(publishedAt desc) [0] {_id, title, slug, "image": image.asset._ref}`),
+      ]);
+
+      const vids = videos.status === 'fulfilled' ? videos.value : [];
+      const dev  = devotionals.status === 'fulfilled' ? devotionals.value : null;
+      const res  = resources.status === 'fulfilled' ? resources.value : null;
+
+      // Slider: point Watch Now to latest video
+      const watchBtn = document.getElementById('sliderWatchBtn');
+      if (watchBtn && vids[0]?.slug?.current) {
+        watchBtn.href = `/detail-video?slug=${vids[0].slug.current}`;
+      }
+
+      // Featured main: latest video
+      if (vids[0]) {
+        const v = vids[0];
+        const thumb = v.thumbnail ? sanityImageUrl(v.thumbnail, 800) : 'images/Resources.jpg';
+        document.getElementById('featuredMainLink').href = v.slug?.current ? `/detail-video?slug=${v.slug.current}` : '/videos';
+        document.getElementById('featuredMainThumb').innerHTML = `<img src="${thumb}" alt="${v.title}" style="width:100%;height:100%;object-fit:cover;">`;
+        document.getElementById('featuredMainTitle').textContent = v.title;
+      }
+
+      // Featured sidebar
+      const v2 = vids[1];
+      const d  = dev;
+      const r  = res;
+
+      document.getElementById('featuredSidebar').innerHTML = `
+        <a href="${v2?.slug?.current ? `/detail-video?slug=${v2.slug.current}` : '/videos'}" class="featuredMiniCard">
+          <div class="featuredMiniThumb">
+            <img src="${v2?.thumbnail ? sanityImageUrl(v2.thumbnail, 400) : 'images/Resources.jpg'}" alt="${v2?.title || 'Past episode'}" loading="lazy">
+          </div>
+          <div class="featuredMiniInfo">
+            <span class="featuredMiniBadge">PAST EPISODE</span>
+            <p class="featuredMiniTitle">${v2?.title || 'Browse past episodes'}</p>
+          </div>
+        </a>
+        <a href="${d?.slug?.current ? `/detail-devotional?slug=${d.slug.current}` : '/devotionals'}" class="featuredMiniCard">
+          <div class="featuredMiniThumb">
+            <img src="${d?.image ? sanityImageUrl(d.image, 400) : 'images/Group-21.jpg'}" alt="${d?.title || 'Devotional'}" loading="lazy">
+          </div>
+          <div class="featuredMiniInfo">
+            <span class="featuredMiniBadge">DEVOTIONAL</span>
+            <p class="featuredMiniTitle">${d?.title || 'Daily devotionals'}</p>
+          </div>
+        </a>
+        <a href="${r?.slug?.current ? `/detail-story?slug=${r.slug.current}` : '/resources'}" class="featuredMiniCard">
+          <div class="featuredMiniThumb">
+            <img src="${r?.image ? sanityImageUrl(r.image, 400) : 'images/Resources.jpg'}" alt="${r?.title || 'Resource'}" loading="lazy">
+          </div>
+          <div class="featuredMiniInfo">
+            <span class="featuredMiniBadge">RESOURCES</span>
+            <p class="featuredMiniTitle">${r?.title || 'Browse resources'}</p>
+          </div>
+        </a>`;
+
+      // Videos grid: 3 latest
+      const grid = document.getElementById('videosGrid');
+      if (vids.length) {
+        grid.innerHTML = vids.map(v => {
+          const thumb = v.thumbnail ? sanityImageUrl(v.thumbnail, 600) : 'images/Resources.jpg';
+          return `
+            <a href="${v.slug?.current ? `/detail-video?slug=${v.slug.current}` : '/videos'}" class="videoCard">
+              <div class="videoCardThumb">
+                <img src="${thumb}" alt="${v.title}" loading="lazy">
+              </div>
+              <span class="videoCardTitle">${v.title}</span>
+            </a>`;
+        }).join('');
+      }
+    }
+
+    loadHomepage();
+  </script>
 
 </body>
 </html>
