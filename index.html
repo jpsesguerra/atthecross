@@ -50,7 +50,7 @@
 
       <div class="sliderSlide sliderSlide--book isActive" aria-hidden="false">
         <div class="sliderCta">
-          <a href="/videos" class="btn btnPrimary" id="sliderWatchBtn">WATCH NOW</a>
+          <a href="https://atthecrosslive.online.church/" target="_blank" rel="noopener" class="btn btnPrimary">WATCH NOW</a>
         </div>
       </div>
 
@@ -244,12 +244,6 @@
       const vids = videos.status === 'fulfilled' ? videos.value : [];
       const dev  = devotionals.status === 'fulfilled' ? devotionals.value : null;
       const res  = resources.status === 'fulfilled' ? resources.value : null;
-
-      // Slider: point Watch Now to latest video
-      const watchBtn = document.getElementById('sliderWatchBtn');
-      if (watchBtn && vids[0]?.slug?.current) {
-        watchBtn.href = `/detail-video?slug=${vids[0].slug.current}`;
-      }
 
       // Featured main: latest video
       if (vids[0]) {
